@@ -1,0 +1,17 @@
+#配置中心
+spring:
+  application:
+    name: gulimall-coupon
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        #设置命名空间id
+        namespace: 3b6529f2-afb7-45c6-94d1-0b17ee72add5
+        #设置分组
+        group: dev
+        # 加载其它配置文件
+        extension-configs:
+          - dataId: datasource.yml
+            group: dev
+            refresh: true

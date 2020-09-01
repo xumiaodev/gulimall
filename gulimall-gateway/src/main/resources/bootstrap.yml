@@ -1,0 +1,10 @@
+#配置中心
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        #设置命名空间id
+        namespace: be364fef-cc66-4105-8468-03d463d16b57
