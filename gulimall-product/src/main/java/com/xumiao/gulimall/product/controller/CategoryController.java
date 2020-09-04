@@ -1,6 +1,7 @@
 package com.xumiao.gulimall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,16 @@ import com.xumiao.common.utils.R;
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;
+
+    /**
+     * 获取树形结构数据
+     * @return
+     */
+    @RequestMapping("/treeData")
+    public R treeData(){
+        List<CategoryEntity> list = categoryService.getTreeData();
+        return R.ok().put("data", list);
+    }
 
     /**
      * 列表
